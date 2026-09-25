@@ -1,0 +1,40 @@
+# recommend python 3.12
+
+# Basic dependencies
+numpy==2.3.4
+pandas==2.3.3
+scipy==1.16.3
+scikit-learn==1.7.2
+matplotlib==3.10.7
+seaborn==0.13.2
+tqdm==4.67.1
+PyYAML==6.0.3
+biopython==1.86
+blosum==2.0.3
+
+# Deep learning dependencies
+torch==2.9.0
+torchvision==0.24.0
+torchtext==0.18.0
+esm==3.2.3
+transformers==4.48.1
+einops==0.8.1
+safetensors==0.6.2
+
+# Development tools
+ipython==9.9.0
+jupyterlab==4.4.10
+notebook==7.4.7
+
+# Other dependencies
+requests==2.32.5
+huggingface-hub==0.36.0
+filelock==3.20.0
+joblib==1.5.2
+python-dateutil==2.9.0.post0
+pytz==2025.2
+packaging==25.0
+certifi==2025.10.5
+idna==3.11
+urllib3==2.5.0
+charset-normalizer==3.4.4

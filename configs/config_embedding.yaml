@@ -1,0 +1,67 @@
+# Dictionary mapping each amino acid sequence to its saved embedding file.
+embeddingDictPath: "./models/embeddingDict.pkl"
+
+# Directory containing TCR-peptide-HLA CSV datasets.
+originDataDirs:
+  - "./datasets/data_TCRpHLA/"
+
+# Amino acid sequence columns that require ESMc embedding.
+#
+# HLA allele columns such as "HLA-A*02:01" are not embedded directly.
+# They must first be mapped to an HLA amino acid sequence and stored
+# in the hla_sequence column.
+squenceColumnName:
+  - "cdr3_beta"
+  - "CDR3_beta"
+  - "CDR3.beta"
+  - "CDR3"
+  - "tcr"
+  - "TCR"
+  - "peptide"
+  - "Peptide"
+  - "Epitope"
+  - "MT_pep"
+  - "hla_sequence"
+  - "HLA_sequence"
+
+# HLA class I allele-to-sequence mapping configuration.
+hlaMapping:
+  enabled: true
+
+  # CSV file containing the HLA allele-to-sequence dictionary.
+  dictionaryPath: "./datasets/hla_classI_sequence_dict.csv"
+
+  # HLA allele column in the TCR-peptide-HLA datasets.
+  dataAlleleColumn: "HLA"
+
+  # HLA allele column in the mapping dictionary.
+  dictionaryAlleleColumn: "HLA"
+
+  # HLA amino acid sequence column in the mapping dictionary.
+  dictionarySequenceColumn: "sequence"
+
+  # New sequence column generated after HLA mapping.
+  outputSequenceColumn: "hla_sequence"
+
+# Device used to load ESMc and generate embeddings.
+device: "cuda:0"
+
+# Local ESMc-300M model directory.
+ESMcPath: "./models/ESMc300m.pt"
+
+# Directory used to save residue-level embedding files.
+embeddingDirPath: "./models/ESMcEmbedding/"
+
+# Maximum number of embedding files in each subdirectory.
+maxFilesPerDir: 1000
+
+# Maximum sequence length used by ESMc.
+#
+# This configuration assumes:
+# - peptide length <= 34
+# - CDR3 beta length <= 34
+# - the HLA dictionary provides a 34-residue HLA pseudo-sequence
+maxSeqLength: 34
+
+# Invalid sequences or failed embeddings are written here.
+errorLogPath: "./models/ESMc/ESMcEmbedding/error.log"

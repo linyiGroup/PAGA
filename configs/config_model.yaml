@@ -1,0 +1,7 @@
+
+
+
+input_dim: 960
+feat_dim: 64
+num_heads: 1
+sequence_length: 34

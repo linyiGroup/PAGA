@@ -1,0 +1,9 @@
+Validation loss: 0.193504
+   ROC-AUC 	 PR-AUC 	 PPVn 	 Accuracy 	 F1 	 MCC 
+    93.66 	  47.35 	  48.28 	  90.73 	  41.11 	  36.73 
+  independent test loss: 0.260366
+   ROC-AUC 	 PR-AUC 	 PPVn 	 Accuracy 	 F1 	 MCC 
+    87.86 	  32.36 	  41.70 	  91.12 	  20.82 	  18.73 
+  external test loss: 0.482016
+   ROC-AUC 	 PR-AUC 	 PPVn 	 Accuracy 	 F1 	 MCC 
+    76.73 	  25.91 	  30.04 	  87.28 	  30.41 	  23.64 

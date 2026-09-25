@@ -1,0 +1,23 @@
+data:
+  train_csv: "./datasets/data_TCRpHLA/reftcr/train_data.csv"
+  val_csv: "./datasets/data_TCRpHLA/reftcr/val_data.csv"
+  independent_test_csv: "./datasets/data_TCRpHLA/reftcr/test_data.csv"
+  external_test_csv: "./datasets/data_TCRpHLA/reftcr/dbpepneo_data.csv"
+
+  embedding_dict_path: "../PAGA/models/ESMc/ESMcEmbedding/embeddingDict.pkl"
+  embedding_root: "../PAGA/models/ESMc/ESMcEmbedding"
+  max_length: 34
+
+training:
+  batch_size: 256
+  epochs: 200
+  log_interval: 100
+  learning_rate: 0.00001
+  weight_decay: 0.0
+  device: "cuda:0"
+  num_workers: 5
+
+testing:
+  model_path: "./final_model_states/PAGA_reftcr.pt"
+
+output_path: "./outputs/"
