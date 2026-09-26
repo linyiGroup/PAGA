@@ -31,6 +31,9 @@ PAGA_release/
 │   │   ├── random/                  # train/validation/test/dbpepneo data
 │   │   ├── reftcr/                  # train/validation/test/dbpepneo data
 │   │   └── unipep/                  # train/validation/test/dbpepneo data
+│   ├── data_interpretability/
+│   │   ├── pHLA/                    # data for pHLA interpretability analysis
+│   │   └── pTCR/                    # data for pTCR interpretability analysis
 │   ├── dataset.py                   # PyTorch dataset and embedding loader
 │   └── hla_classI_sequence_dict.csv # HLA allele-to-sequence mapping
 ├── final_model_states/
